@@ -6,21 +6,21 @@
 ## Installation
 
 ```
-$ npm install --save-dev eslint eslint-config-staffbase
+$ npm install --save-dev eslint eslint-config-google @staffbase/eslint-config-staffbase
 ```
 or
 ```
-$ yarn add --dev eslint eslint-config-staffbase
+$ yarn add --dev eslint eslint-config-google @staffbase/eslint-config-staffbase
 ```
 
 
 ## Usage
 
-Once the `eslint-config-staffbase` package is installed, you can use it by specifying `staffbase` in the [`extends`](http://eslint.org/docs/user-guide/configuring#extending-configuration-files) section of your [ESLint configuration](http://eslint.org/docs/user-guide/configuring).
+Once the `@staffbase/eslint-config-staffbase` package is installed, you can use it by specifying `@staffbase/eslint-config-staffbase` in the [`extends`](http://eslint.org/docs/user-guide/configuring#extending-configuration-files) section of your [ESLint configuration](http://eslint.org/docs/user-guide/configuring).
 
 ```js
 {
-  "extends": "staffbase",
+  "extends": "@staffbase/eslint-config-staffbase",
   "rules": {
     // Additional, per-project rules...
   }

@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-staffbase",
+  "name": "@staffbase/eslint-config-staffbase",
   "version": "0.1.0",
   "description": "Base ESLint config for Staffbase based on Google's config",
   "license": "MIT",
@@ -24,9 +24,11 @@
   ],
   "devDependencies": {
     "eslint": "^3.8.1",
+    "eslint-config-google": "^0.7.1",
     "jest": "^19.0.2"
   },
   "peerDependencies": {
-    "eslint": ">=3.8.1"
+    "eslint": ">=3.8.1",
+    "eslint-config-google": ">=0.7.1"
   }
 }

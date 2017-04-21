@@ -7,7 +7,7 @@ const eslint = require('eslint');
 const conf = require('../');
 
 // The source files to lint.
-const repoFiles =         [
+const repoFiles = [
   'index.js',
   'test/test.js',
 ];
