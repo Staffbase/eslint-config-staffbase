@@ -1,0 +1,32 @@
+{
+  "name": "eslint-config-staffbase",
+  "version": "0.1.0",
+  "description": "Base ESLint config for Staffbase based on Google's config",
+  "license": "MIT",
+  "repository": "staffbase/eslint-config-staffbase",
+  "author": "Staffbase",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "staffbase",
+    "code",
+    "quality",
+    "style",
+    "eslint",
+    "code style"
+  ],
+  "devDependencies": {
+    "eslint": "^3.8.1",
+    "jest": "^19.0.2"
+  },
+  "peerDependencies": {
+    "eslint": ">=3.8.1"
+  }
+}
