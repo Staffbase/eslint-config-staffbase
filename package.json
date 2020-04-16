@@ -6,7 +6,7 @@
   "repository": "staffbase/eslint-config-staffbase",
   "author": "Staffbase",
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=10.0.0"
   },
   "scripts": {
     "test": "jest"
@@ -23,12 +23,12 @@
     "code style"
   ],
   "devDependencies": {
-    "eslint": "^3.8.1",
-    "eslint-config-google": "^0.7.1",
-    "jest": "^19.0.2"
+    "eslint": "^6.8.0",
+    "eslint-config-google": "^0.14.0",
+    "jest": "^25.3.0"
   },
   "peerDependencies": {
-    "eslint": ">=3.8.1",
-    "eslint-config-google": ">=0.7.1"
+    "eslint": ">=3.8.0",
+    "eslint-config-google": ">=0.14.0"
   }
 }
