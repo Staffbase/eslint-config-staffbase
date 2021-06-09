@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: eslint-config-staffbase
+  annotations:
+    github.com/project-slug: Staffbase/eslint-config-staffbase
+  tags:
+    - javascript
+spec:
+  type: service
+  lifecycle: production
