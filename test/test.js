@@ -3,7 +3,7 @@
 'use strict';
 
 const assert = require('assert');
-const eslint = require('eslint');
+const { ESLint } = require("eslint");
 const conf = require('../');
 
 // The source files to lint.
@@ -13,18 +13,24 @@ const repoFiles = [
 ];
 
 // Use the rules defined in this repo to test against.
-const eslintOpts = {
-  envs: ['node', 'es6'],
+const eslint = new ESLint({
   useEslintrc: false,
-  rules: conf.rules,
-};
+  overrideConfig: { env: { node: true, es6: true }, rules: conf.rules }
+});
 
-test('Run the linter on the repo files and asserts no errors were found', () => {
-  const report = new eslint.CLIEngine(eslintOpts).executeOnFiles(repoFiles);
+test('Run the linter on the repo files and asserts no errors were found', async () => {
+   const lintResults =  await eslint.lintFiles(repoFiles);
 
-  expect(report.errorCount).toBe(0);
-  expect(report.warningCount).toBe(0);
+   const totalErrorCount = lintResults.reduce((acc, { errorCount }) => {
+     return (acc += errorCount), 0;
+   });
+   const totalWarningCount = lintResults.reduce((acc, { warningCount }) => {
+     return (acc += warningCount), 0;
+   });
+
+  expect(totalErrorCount).toBe(0);
+  expect(totalWarningCount).toBe(0);
   repoFiles.forEach((file, index) => {
-    expect(report.results[index].filePath.endsWith(file)).toBe(true);
+    expect(lintResults[index].filePath.endsWith(file)).toBe(true);
   });
 });
